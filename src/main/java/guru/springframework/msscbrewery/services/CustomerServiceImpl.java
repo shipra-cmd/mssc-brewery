@@ -17,4 +17,14 @@ public class CustomerServiceImpl implements CustomerService {
                 .name("Joe Buck")
                 .build();
     }
+
+    @Override
+    public CustomerDto saveNewCustomer(CustomerDto customerDto) {
+        return CustomerDto.builder().id(UUID.randomUUID()).build();
+    }
+
+    @Override
+    public void updateCustomer(UUID customerId, CustomerDto customerDto) {
+        //todo impl - would add a real impl to update beer
+    }
 }
